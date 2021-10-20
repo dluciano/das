@@ -84,10 +84,7 @@ public class MinCostClimbingStairs_746
     }
 
     public static int ShortestStepsRecursive(int[] arr, int i = -1)
-    {
-        if (arr.Length == 1)
-            return arr[0];
-
+    {        
         if (i >= arr.Length)
             return 0;
 
