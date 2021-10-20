@@ -55,6 +55,7 @@ public class MinCostClimbingStairs_746
         result.ShouldBe(expected);
     }
 
+    // T = O(N) S = O(N)
     public static int ShortestStepsTabulation(int[] cost)
     {
         for (var i = 2; i < cost.Length; i++)
@@ -65,6 +66,7 @@ public class MinCostClimbingStairs_746
         return Math.Min(cost[cost.Length - 1], cost[cost.Length - 2]);
     }
 
+    // T = O(N), S = O(N^2)
     public static int ShortestStepsMemo(int[] arr, Dictionary<int, int> memo, int i = -1)
     {
         if (memo.ContainsKey(i)) return memo[i];
@@ -83,8 +85,9 @@ public class MinCostClimbingStairs_746
         return sum;
     }
 
+    // T = O(2^N), S = O(N)
     public static int ShortestStepsRecursive(int[] arr, int i = -1)
-    {        
+    {
         if (i >= arr.Length)
             return 0;
 
