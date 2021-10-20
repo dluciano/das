@@ -94,9 +94,6 @@ public class MinCostClimbingStairs_746
         var left = ShortestStepsRecursive(arr, i + 1);
         var right = ShortestStepsRecursive(arr, i + 2);
 
-        if (arr.Length <= 0)
-            return 0;
-
         var cost = i < 0 ? 0 : arr[i];
         var min = Math.Min(left, right);
         var sum = cost + min;
